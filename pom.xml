@@ -8,7 +8,14 @@
 	<packaging>pom</packaging>
 
     <modules>
-		<module>gpmall-pc-1</module>
-		<module>gpmall-pc-2</module>
+		<module>app-demo</module>
+		<module>DataBaseDriver</module>
+		<module>gp-core-app</module>
+		<module>mysql-driver</module>
+		<module>redisson-spring-boot-starter</module>
+		<module>spring-boot-demo</module>
+		<module>spring-boot-demo-02</module>
+		<module>spring-mvc-demo</module>
+		<module>app-demo</module>
     </modules>
 </project>
