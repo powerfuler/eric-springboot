@@ -13,8 +13,21 @@ import java.util.Date;
 @Service
 public class TaskService02 {
 
-    @Scheduled(fixedRate = 3000)
-    public void reportCurrentTime(){
+    @Scheduled(fixedRate = 1000)
+    public void reportCurrentTime1(){
         System.out.println("current Time:"+new Date());
+        System.out.println(Thread.currentThread().getName());
+    }
+
+    @Scheduled(fixedRate = 2000)
+    public void reportCurrentTime2(){
+        System.out.println("current Time:"+new Date());
+        System.out.println(Thread.currentThread().getName());
+    }
+
+    @Scheduled(fixedRate = 3000)
+    public void reportCurrentTime3(){
+        System.out.println("current Time:"+new Date());
+        System.out.println(Thread.currentThread().getName());
     }
 }
