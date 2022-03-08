@@ -31,7 +31,7 @@ public class UserInnoDBBatchInsertTest {
 
     List<UserTest> list;
 
-    private static final int USER_COUNT = 2000000; // 数量过大可能导致内存溢出，多运行几次
+    private static final int USER_COUNT = 5000000; // 数量过大可能导致内存溢出，多运行几次
 
 
     @Test
@@ -61,7 +61,7 @@ public class UserInnoDBBatchInsertTest {
      */
     public void save(List<UserTest> list) {
         final List<UserTest> tempList = list;
-        String sql = "insert into user_archive(id, name, gender, phone) "
+        String sql = "insert into user_innodb(id, name, gender, phone) "
                 + "values(?, ?, ?, ?)";
         jdbcTemplate.batchUpdate(sql, new BatchPreparedStatementSetter() {
             public void setValues(PreparedStatement ps, int i) throws SQLException {
